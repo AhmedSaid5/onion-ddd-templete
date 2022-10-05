@@ -16,10 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\Onion.App\Onion.App.csproj" />
     <ProjectReference Include="..\Onion.Infra\Onion.Infra.csproj" />
   </ItemGroup>
 

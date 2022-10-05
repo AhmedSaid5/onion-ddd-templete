@@ -8,12 +8,10 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
-    <PackageReference Include="MediatR" Version="11.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Repositories\CustomRepositories\" />
-    <Folder Include="Services\CustomerServices\" />
+    <ProjectReference Include="..\Onion.Domain\Onion.Domain.csproj" />
   </ItemGroup>
 
 </Project>

@@ -22,7 +22,7 @@ namespace Onion.Core.Models.Infrastructure
         public int TotalRowsCount { get; set; }
         public int TotalPages { get; set; }
         public int PageSize { get; set; }
-        public string SortBy { get { return SortField + " " + SearchOrder.ToString(); } }
+        public string SortBy { get { return SortField ?? "Id" + " " + SearchOrder.ToString(); } }
     }
 
     public enum SearchOrders : byte

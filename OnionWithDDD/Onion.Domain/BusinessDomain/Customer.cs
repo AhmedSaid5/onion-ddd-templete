@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Onion.Domain.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -73,15 +74,15 @@ namespace Onion.Domain.BusinessDomain
                 _customerContacts.Remove(customerContact);
         }
 
+        public void RemoveAllContacts() 
+        {
+            _customerContacts.Clear();
+        }
+
         #endregion
     }
 
     public record Address (string Street, string City, string State, string Country, string Zipcode);
 
-    public enum CustomerStatus : byte
-    {
-        Pending = 1,
-        Active = 2,
-        Suspended = 3
-    }
+   
 }
