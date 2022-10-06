@@ -15,7 +15,7 @@ builder.Services.AddAutoMapper();
 builder.Services.AddRepositories();
 builder.Services.AddServices();
 builder.Services.AddMediatR();
-builder.Services.AddHandellers();
+//builder.Services.AddHandellers();
 builder.Services.AddDbContexts(builder.Configuration);
 builder.Services.AddUnitOfWork();
 

@@ -19,6 +19,7 @@ using Onion.App.Queries.Customers;
 using Onion.Core.Models.ViewModels;
 using Onion.App.QueryHandelers;
 using Onion.Core.Models.Infrastructure;
+using System.Reflection;
 
 namespace Onion.Host.Infrastructure
 {
@@ -51,13 +52,13 @@ namespace Onion.Host.Infrastructure
 
         public static void AddHandellers(this IServiceCollection serviceCollection)
         {
-            serviceCollection.AddScoped<IRequestHandler<CreateCustomerCommand, Guid>, CreateCustomerCommandHandeler>();
-            serviceCollection.AddScoped<IRequestHandler<UpdateCustomerCommand, bool>, UpdateCustomerCommandHandeler>();
-            serviceCollection.AddScoped<IRequestHandler<DeleteCustomerCommand, bool>, DeleteCustomerCommandHandeler>();
-            serviceCollection.AddScoped<IRequestHandler<ActivateCustomerCommand, bool>, ActivateCustomerCommandHandeler>();
-            serviceCollection.AddScoped<IRequestHandler<SuspendCustomerCommand, bool>, SuspendCustomerCommandHandeler>();
-            serviceCollection.AddScoped<IRequestHandler<GetCustomerByIdCommand, CustomerVm>, GetCustomerByIdCommandHandeler>();
-            serviceCollection.AddScoped<IRequestHandler<GetCustomerBySearchCommand, PagedListModel<CustomerVm>>, GetCustomerBySearchCommandHandeler>();
+            //serviceCollection.AddScoped<IRequestHandler<CreateCustomerCommand, Guid>, CreateCustomerCommandHandeler>();
+            //serviceCollection.AddScoped<IRequestHandler<UpdateCustomerCommand, bool>, UpdateCustomerCommandHandeler>();
+            //serviceCollection.AddScoped<IRequestHandler<DeleteCustomerCommand, bool>, DeleteCustomerCommandHandeler>();
+            //serviceCollection.AddScoped<IRequestHandler<ActivateCustomerCommand, bool>, ActivateCustomerCommandHandeler>();
+            //serviceCollection.AddScoped<IRequestHandler<SuspendCustomerCommand, bool>, SuspendCustomerCommandHandeler>();
+            //serviceCollection.AddScoped<IRequestHandler<GetCustomerByIdCommand, CustomerVm>, GetCustomerByIdCommandHandeler>();
+            //serviceCollection.AddScoped<IRequestHandler<GetCustomerBySearchCommand, PagedListModel<CustomerVm>>, GetCustomerBySearchCommandHandeler>();
 
         }
 
@@ -77,7 +78,13 @@ namespace Onion.Host.Infrastructure
 
         public static void AddMediatR(this IServiceCollection serviceCollection)
         {
-            serviceCollection.AddMediatR(typeof(Program).Assembly);
+            //serviceCollection.AddMediatR(Assembly.GetExecutingAssembly());
+            serviceCollection.AddMediatR(AppDomain.CurrentDomain.GetAssemblies().Single(x => x.FullName.Contains("Onion.App")));
+
+            
+            //serviceCollection.AddMediatR();
+
+            //serviceCollection.AddMediatR(typeof(Program).Assembly);
         }
 
 
