@@ -13,7 +13,7 @@ using Onion.Core.Services.BaseServices;
 using Onion.App.Services.BaseServices;
 using Onion.Core.Services.CustomerServices;
 using Onion.App.Services.CustomerServices;
-using Onion.App.Commands.Customers;
+using Onion.Core.Commands.Customers;
 using Onion.App.CommandHandelers;
 using Onion.App.Queries.Customers;
 using Onion.Core.Models.ViewModels;

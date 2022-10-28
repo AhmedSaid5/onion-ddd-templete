@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Onion.App.Commands.Customers
+namespace Onion.Core.Commands.Customers
 {
     public class CustomerContactCommand
     {

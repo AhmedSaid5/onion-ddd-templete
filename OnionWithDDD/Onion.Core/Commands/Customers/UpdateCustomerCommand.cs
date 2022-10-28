@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace Onion.App.Commands.Customers
+namespace Onion.Core.Commands.Customers
 {
     public class UpdateCustomerCommand : IRequest<bool>
         {

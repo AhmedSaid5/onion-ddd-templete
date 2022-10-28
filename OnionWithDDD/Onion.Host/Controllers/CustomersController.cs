@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
 using Onion.App.CommandHandelers;
-using Onion.App.Commands.Customers;
+using Onion.Core.Commands.Customers;
 using Onion.Core.Models.ViewModels;
 using Onion.App.Queries.Customers;
 using Onion.Core.Models.Infrastructure;

@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Onion.App.Commands.Customers;
+using Onion.Core.Commands.Customers;
 using Onion.Core.Models.ViewModels;
 using Onion.Domain.BusinessDomain;
 using System;

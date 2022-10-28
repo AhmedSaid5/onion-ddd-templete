@@ -1,5 +1,5 @@
 ﻿using MediatR;
-using Onion.App.Commands.Customers;
+using Onion.Core.Commands.Customers;
 using Onion.Core.Services.CustomerServices;
 using Onion.Domain.BusinessDomain;
 
