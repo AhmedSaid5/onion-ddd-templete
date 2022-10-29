@@ -7,10 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="EventHandelers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Onion.Core\Onion.Core.csproj" />
     <ProjectReference Include="..\Onion.Domain\Onion.Domain.csproj" />
   </ItemGroup>
